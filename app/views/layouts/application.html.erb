@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MoveGroove</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>MoveGroove</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <%= render('layouts/header') %>
+  <div class="container">
+  <% if(notice) then %>
+  <p class="notice">
+    <%= notice %>
+  </p>
+  <% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+  <% if(alert) then %>
+  <p class="alert">
+    <%= alert %>
+  </p>
+  <% end %>
+   <%= yield %>
+  </div>
+  <%= render('layouts/footer') %>
+</body>
 </html>

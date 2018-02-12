@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootswatch/lumen/variables';
+$primary: #ee575a;
+@import 'bootstrap';
+@import 'bootswatch/lumen/bootswatch';
+@import 'font-awesome';
+
+.navbar {
+  padding: 1rem;
+}
