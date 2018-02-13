@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2">
   <div class="container">
     <%= link_to "Move&Groove", root_path, class:"navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -18,7 +18,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+             aria-expanded="false">
             Dropdown
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,20 +31,20 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item mr-1">
-        <% if(user_session) then %>
-        <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
-            <%= fa_icon "sign-in lg" %> logged
-          <% end %>
-        <% else %>
-          <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
-            <%= fa_icon "sign-in lg" %> Login
-          <% end %>
+          <% if(user_session) then %>
+            <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
+              <%= fa_icon "sign-in lg" %> logged
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
+              <%= fa_icon "sign-in lg" %> Login
+            <% end %>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to new_user_registration_path, class:'btn btn-secondary' do %>
             <%= fa_icon "user-plus lg" %> Register
-              <% end %>
+          <% end %>
         </li>
       </ul>
 

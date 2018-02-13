@@ -7,21 +7,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <%= render('layouts/header') %>
-  <div class="container">
+<%= render('layouts/header') %>
+<div class="container">
   <% if(notice) then %>
-  <p class="notice">
-    <%= notice %>
-  </p>
+    <p class="notice">
+      <%= notice %>
+    </p>
   <% end %>
 
   <% if(alert) then %>
-  <p class="alert">
-    <%= alert %>
-  </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
   <% end %>
-   <%= yield %>
-  </div>
-  <%= render('layouts/footer') %>
+  <%= yield %>
+</div>
+<%= render('layouts/footer') %>
 </body>
 </html>

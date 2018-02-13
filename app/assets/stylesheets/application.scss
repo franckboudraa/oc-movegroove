@@ -10,15 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
-@import 'bootswatch/lumen/variables';
-$primary: #ee575a;
-@import 'bootstrap';
-@import 'bootswatch/lumen/bootswatch';
 @import 'font-awesome';
-
-.navbar {
-  padding: 1rem;
-}
+@import "bootswatch/lumen/variables";
+@import "bootstrap";
+@import "bootswatch/lumen/bootswatch";
