@@ -1,16 +1,20 @@
 <div class="row">
-  <div class="col-sm-4 ml-auto mr-auto">
-    <h2 class="text-center">Resend confirmation instructions</h2>
+  <div class="col-md-6 ml-auto mr-auto main-content px-5">
+    <h2 class="text-center mb-4">Resend confirmation instructions</h2>
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: 'form-control', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+          </div>
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: :email, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        </div>
       </div>
 
-      <div class="actions">
+      <div class="form-group">
         <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     <% end %>
