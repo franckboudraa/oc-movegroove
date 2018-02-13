@@ -33,17 +33,17 @@
         <li class="nav-item mr-1">
           <% if(user_session) then %>
             <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
-              <%= fa_icon "sign-in lg" %> logged
+              <%= icon('fas', 'sign-in-alt', 'Logged') %>
             <% end %>
           <% else %>
             <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
-              <%= fa_icon "sign-in lg" %> Login
+              <%= icon('fas', 'sign-in-alt', 'Login') %>
             <% end %>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to new_user_registration_path, class:'btn btn-secondary' do %>
-            <%= fa_icon "user-plus lg" %> Register
+            <%= icon('fas', 'user-plus') %> Register
           <% end %>
         </li>
       </ul>

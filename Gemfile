@@ -36,7 +36,7 @@ gem 'devise' # Managing authentication
 gem 'bootstrap' # Bootstrap 4
 gem 'bootswatch' # Bootswatch 4 themes
 gem 'jquery-rails' # jQuery for Rails
-gem 'font-awesome-rails' # Font Awesome icons
+gem 'font-awesome-sass', '~> 5.0.6' # Font Awesome icons
 
 
 group :development, :test do

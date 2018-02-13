@@ -10,17 +10,23 @@
 <%= render('layouts/header') %>
 <div class="container">
   <% if(notice) then %>
-    <p class="notice">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
       <%= notice %>
-    </p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   <% end %>
 
   <% if(alert) then %>
-    <p class="alert">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
       <%= alert %>
-    </p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   <% end %>
-  <%= yield %>
+    <%= yield %>
 </div>
 <%= render('layouts/footer') %>
 </body>
