@@ -6,6 +6,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <user-name>chwcqngzdlrndc</user-name>
       <introspection-schemas>dfvh7kh5moj8qg:public</introspection-schemas>
     </data-source>
@@ -14,6 +15,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <user-name>chwcqngzdlrndc</user-name>
       <introspection-schemas>dfvh7kh5moj8qg:public</introspection-schemas>
     </data-source>

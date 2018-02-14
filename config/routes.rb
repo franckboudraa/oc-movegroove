@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :activities
   Rails.application.routes.draw do
+  resources :activities
     devise_for :users, controllers: {
       sessions: 'users/sessions'
     }
