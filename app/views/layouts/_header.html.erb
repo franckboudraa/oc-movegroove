@@ -30,22 +30,29 @@
         </li>
       </ul>
       <ul class="navbar-nav">
-        <li class="nav-item mr-1">
-          <% if(user_session) then %>
-            <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
-              <%= icon('fas', 'sign-in-alt', 'Logged') %>
+        <% if(user_session) %>
+          <li class="nav-item mr-1">
+            <%= link_to destroy_user_session_path, class:'btn btn-secondary', method: :delete do %>
+              <%= icon('fas', 'user', current_user.email) %>
             <% end %>
-          <% else %>
+          </li>
+          <li class="nav-item">
+            <%= link_to destroy_user_session_path, class:'btn btn-secondary', method: :delete do %>
+              <%= icon('fas', 'sign-out-alt', 'Log out') %>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="nav-item mr-1">
             <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
               <%= icon('fas', 'sign-in-alt', 'Login') %>
             <% end %>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to new_user_registration_path, class:'btn btn-secondary' do %>
-            <%= icon('fas', 'user-plus') %> Register
-          <% end %>
-        </li>
+          </li>
+          <li class="nav-item">
+            <%= link_to new_user_registration_path, class:'btn btn-secondary' do %>
+              <%= icon('fas', 'user-plus', 'Register') %>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
 
     </div>
