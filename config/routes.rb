@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   resources :activities
-  Rails.application.routes.draw do
-  resources :activities
-    devise_for :users, controllers: {
+  devise_for :users, controllers: {
       sessions: 'users/sessions'
-    }
-  end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  }
+  resources :users, only: [:show]
+
   root to: "static_pages#homepage"
 end
