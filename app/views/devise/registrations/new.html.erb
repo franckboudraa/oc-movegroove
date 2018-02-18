@@ -1,44 +1,85 @@
 <div class="row">
-  <div class="col-md-6 ml-auto mr-auto main-content px-5">
-    <h1 class="text-center mb-3">Sign Up</h1>
-
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+  <div class="col-md-11 ml-auto mr-auto">
+    <div class="card card-transparent">
+      <div class="card-body p-5">
+        <div class="row">
+          <div class="col-md-6 d-none d-md-block">
+            <div class="info info-horizontal">
+              <div class="icon icon-rose">
+                <i class="material-icons">timeline</i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Marketing</h4>
+                <p class="description">
+                  We've created the marketing campaign of the website. It was a very interesting collaboration.
+                </p>
+              </div>
+            </div>
+            <div class="info info-horizontal">
+              <div class="icon icon-primary">
+                <i class="material-icons">code</i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Fully Coded in HTML5</h4>
+                <p class="description">
+                  We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+                </p>
+              </div>
+            </div>
+            <div class="info info-horizontal">
+              <div class="icon icon-info">
+                <i class="material-icons">group</i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Built Audience</h4>
+                <p class="description">
+                  There is also a Fully Customizable CMS Admin Dashboard for this product.
+                </p>
+              </div>
+            </div>
           </div>
-          <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: :email %>
+          <div class="col-md-6 col-sm-12 pr-5">
+            <h1 class="text-center mb-3">Sign Up</h1>
+
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+                  </div>
+                  <%= f.email_field :email, autofocus: false, placeholder: :email, class: 'form-control' %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><%= icon('fas', 'key') %></span>
+                  </div>
+                  <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: :password %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><%= icon('fas', 'key') %></span>
+                  </div>
+                  <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: :password_confirmation %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
+              </div>
+            <% end %>
+
+            <div class="text-center">
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'key') %></span>
-          </div>
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: :password %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'key') %></span>
-          </div>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: :password_confirmation %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
-      </div>
-    <% end %>
-
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
     </div>
   </div>
-</div>
