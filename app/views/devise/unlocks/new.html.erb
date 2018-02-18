@@ -1,26 +1,31 @@
 <div class="row">
-  <div class="col-md-6 ml-auto mr-auto main-content px-5">
-    <h2 class="text-center mb-3">Resend unlock instructions</h2>
+  <div class="col-md-7 ml-auto mr-auto px-5">
+    <div class="card card-transparent">
+      <div class="card-header card-header-rose text-center">
+        <h3 class="mt-0 mb-1">Resend unlock instructions</h3>
+      </div>
+      <div class="card-body px-5 py-4">
 
-    <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+        <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+          <%= devise_error_messages! %>
 
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+              </div>
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: :email, required: true %>
+            </div>
           </div>
-          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: :email%>
+
+          <div class="form-group">
+            <%= f.submit "Resend unlock instructions", class: 'btn btn-primary btn-lg btn-block' %>
+          </div>
+        <% end %>
+
+        <div class="text-center">
+          <%= render "devise/shared/links" %>
         </div>
       </div>
-
-      <div class="form-group">
-        <%= f.submit "Resend unlock instructions", class: 'btn btn-primary btn-lg btn-block' %>
-      </div>
-    <% end %>
-
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
     </div>
-  </div>
-</div>
+  </div></div>
