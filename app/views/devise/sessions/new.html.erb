@@ -1,47 +1,53 @@
 <div class="row">
-  <div class="col-md-5 ml-auto mr-auto main-content px-5">
-    <h1 class="text-center mb-3">Log in</h1>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
-          </div>
-          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: :email %>
-        </div>
+  <div class="col-md-6 ml-auto mr-auto px-5">
+    <div class="card card-transparent">
+      <div class="card-header card-header-rose text-center">
+        <h2 class="mt-0 mb-1">Login</h2>
       </div>
+      <div class="card-body px-5 py-4">
 
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><%= icon('fas', 'key') %></span>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+              </div>
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: :email, required: true %>
+            </div>
           </div>
-          <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
-        </div>
-      </div>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="form-group text-center">
-          <div class="form-check">
-            <label class="form-check-label" for="customCheck1">
-              <%= f.check_box :remember_me, class: "form-check-input", id:"customCheck1" %>
-              Remember me
-              <span class="form-check-sign">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><%= icon('fas', 'key') %></span>
+              </div>
+              <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control', required: true %>
+            </div>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="form-group text-center">
+              <div class="form-check">
+                <label class="form-check-label" for="customCheck1">
+                  <%= f.check_box :remember_me, class: "form-check-input", id:"customCheck1" %>
+                  Remember me
+                  <span class="form-check-sign">
                 <span class="check"></span>
               </span>
-            </label>
+                </label>
+              </div>
+            </div>
+          <% end -%>
+
+          <div class="form-group">
+            <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
           </div>
+        <% end %>
+
+        <div class="text-center">
+          <%= render "devise/shared/links" %>
         </div>
-      <% end -%>
-
-      <div class="form-group">
-        <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
       </div>
-    <% end %>
-
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
