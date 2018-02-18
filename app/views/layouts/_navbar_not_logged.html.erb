@@ -1,0 +1,30 @@
+<nav class="navbar navbar-transparent navbar-expand-lg">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="/">move&groove</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-1">
+          <%= link_to new_user_session_path, class:'btn btn-secondary' do %>
+            <%= icon('fas', 'sign-in-alt', 'Login') %>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to new_user_registration_path, class:'btn btn-primary' do %>
+            <%= icon('fas', 'user-plus', 'Register') %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-->
+</nav>

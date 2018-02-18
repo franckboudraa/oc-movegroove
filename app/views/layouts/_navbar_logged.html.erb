@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-translate">
+      <a class="navbar-brand" style="font-size:1.5rem !important;" href="/">move&groove</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Activities", activities_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <a href="#pablo" class="btn btn-rose btn-raised btn-fab btn-round" data-toggle="dropdown">
+            <i class="material-icons">email</i>
+          </a>
+        </li>
+        <li class="dropdown nav-item">
+          <a href="#pablo" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+            <div class="profile-photo-small">
+              <img src="/img/avatars/avatar.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <h6 class="dropdown-header"><%= current_user.email %></h6>
+            <%= link_to "My profile", user_path(current_user), class:'dropdown-item' %>
+            <%= link_to "Preferences", edit_user_registration_path, class:'dropdown-item' %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-->
+</nav>
