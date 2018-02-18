@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro' # Managing env variables
 gem 'devise' # Managing authentication
 gem 'bootstrap' # Bootstrap 4
-gem 'bootswatch' # Bootswatch 4 themes
+#gem 'bootswatch' # Bootswatch 4 themes
 gem 'jquery-rails' # jQuery for Rails
 gem 'font-awesome-sass', '~> 5.0.6' # Font Awesome icons
 

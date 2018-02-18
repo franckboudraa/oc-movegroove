@@ -1,13 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-transparent mb-2">
   <div class="container">
-    <%= link_to "Move&Groove", root_path, class:"navbar-brand", style: "color:#000" %>
+    <%= link_to "move&groove", root_path, class:"navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
+          <% if(user_session) %>
         <li class="nav-item active">
           <a class="nav-link" href="/" style="color:#000">Home
             <span class="sr-only">(current)</span>
@@ -16,7 +17,9 @@
         <li class="nav-item">
           <%= link_to 'Activities', activities_path, class: 'nav-link', style: 'color:#000' %>
         </li>
+          <% end %>
       </ul>
+
       <ul class="navbar-nav">
         <% if(user_session) %>
           <li class="nav-item">
@@ -40,7 +43,7 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to new_user_registration_path, class:'btn btn-secondary' do %>
+            <%= link_to new_user_registration_path, class:'btn btn-primary' do %>
               <%= icon('fas', 'user-plus', 'Register') %>
             <% end %>
           </li>

@@ -1,28 +1,20 @@
-<div class="row">
+<div class="row mt-5">
   <div class="col-md-11 ml-auto mr-auto">
     <div class="card card-transparent">
-      <div class="card-body p-5">
+      <div class="card-header card-header-rose text-center">
+        <h2 class="mt-0 mb-1">Register now for free!</h2>
+      </div>
+      <div class="card-body px-5 py-4">
         <div class="row">
-          <div class="col-md-6 d-none d-md-block">
+          <div class="col-md-5 d-none d-md-block">
             <div class="info info-horizontal">
               <div class="icon icon-rose">
                 <i class="material-icons">timeline</i>
               </div>
               <div class="description">
-                <h4 class="info-title">Marketing</h4>
+                <h4 class="fw-900 info-title-sans-serif">Track your progress</h4>
                 <p class="description">
-                  We've created the marketing campaign of the website. It was a very interesting collaboration.
-                </p>
-              </div>
-            </div>
-            <div class="info info-horizontal">
-              <div class="icon icon-primary">
-                <i class="material-icons">code</i>
-              </div>
-              <div class="description">
-                <h4 class="info-title">Fully Coded in HTML5</h4>
-                <p class="description">
-                  We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </p>
               </div>
             </div>
@@ -31,15 +23,32 @@
                 <i class="material-icons">group</i>
               </div>
               <div class="description">
-                <h4 class="info-title">Built Audience</h4>
+                <h4 class="fw-900 info-title-sans-serif">Workout with friends</h4>
                 <p class="description">
-                  There is also a Fully Customizable CMS Admin Dashboard for this product.
+                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                </p>
+              </div>
+            </div>
+            <div class="info info-horizontal">
+              <div class="icon icon-primary">
+                <i class="material-icons">devices_other</i>
+              </div>
+              <div class="description">
+                <h4 class="fw-900 info-title-sans-serif">Sync all your devices</h4>
+                <p class="description">
+                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12 pr-5">
-            <h1 class="text-center mb-3">Sign Up</h1>
+          <div class="col-md-7 col-sm-12 pr-5 text-center">
+            <button class="btn btn-social btn-fill facebook" style="font-size:0.9rem">
+              <%= icon('fab', 'facebook-f', class: 'mr-2') %> Login with Facebook
+            </button>
+            <button class="btn btn-social btn-fill gplus" style="font-size:0.9rem">
+              <%= icon('fab', 'google', class: 'mr-2') %> Login with Google
+            </button>
+            <h3>or</h3>
 
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>

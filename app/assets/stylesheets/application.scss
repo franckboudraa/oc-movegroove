@@ -15,6 +15,7 @@
  */
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 .main-content{
   background-color: #fafafa;
@@ -24,6 +25,10 @@
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+/*
+old #9c27b0
+new #d4205d
+ */
 .info{
   padding: unset !important;
   margin: unset !important;
@@ -38,4 +43,23 @@
 
 .fw-900{
   font-weight: 900 !important;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  color: #d4205d !important;
+  font-size: 2.5rem !important;
+}
+
+.facebook{
+  background-color: #3b5998 !important;
+}
+
+.gplus{
+  background-color: #d34836 !important;
+}
+
+.info-title-sans-serif{
+  color: #3c4858 !important;
+  margin: 1.75rem 0 .875rem;
 }
