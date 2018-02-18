@@ -8,3 +8,27 @@
 .jumbotron {
   background-color: unset !important;
 }
+.card-profile, .card-testimonial {
+  margin-top: 30px;
+  text-align: center;
+}
+.section-image {
+  background-position: 50%;
+  background-size: cover;
+}
+.section-image {
+  position: relative;
+}
+.card-profile .card-avatar, .card-testimonial .card-avatar {
+  max-width: 130px;
+  max-height: 130px;
+  margin: -50px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+.card-profile .card-avatar img, .card-testimonial .card-avatar img {
+  width: 100%;
+  height: auto;
+}
