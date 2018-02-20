@@ -7,7 +7,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<body class="homepage-bg">
+<% if !current_user %>
+  <% body_class = 'homepage-bg' # Set image background on public pages %>
+<% else %>
+  <% body_class = 'dash-bg' # No image background on private pages %>
+<% end %>
+<body class="<%= body_class %>" >
 <%= render('layouts/header') %>
 <div class="container mb-5">
   <% if(notice) %>

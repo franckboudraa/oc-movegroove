@@ -1,4 +1,9 @@
 class ActivitiesController < ApplicationController
+  # Activities:
+  # - running
+  # - walking
+  # - swimming
+  # -
   before_action :authenticate_user!
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 

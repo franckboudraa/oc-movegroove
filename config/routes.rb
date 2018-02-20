@@ -7,5 +7,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  root to: "static_pages#homepage"
+  authenticated :user do
+    root 'dashboard#index', as: :authenticated_root
+  end
+
+  root to: "static_pages#index"
 end

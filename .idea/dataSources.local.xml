@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails MoveGroove: development" uuid="0da21c16-e37a-4da3-b4b3-d0ba31c7e301">
-      <database-info product="PostgreSQL" version="10.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+      <database-info product="PostgreSQL" version="10.2 (Ubuntu 10.2-1.pgdg14.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
