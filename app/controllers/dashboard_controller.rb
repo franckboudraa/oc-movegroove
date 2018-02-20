@@ -8,7 +8,7 @@ class DashboardController < ApplicationController
   private
 
     def check_if_user_has_name
-      if current_user.name.length < 3
+      if current_user.name == null
         redirect_to welcome_path
       end
     end

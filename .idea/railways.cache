@@ -29,6 +29,9 @@
               user_unlock GET    /users/unlock(.:format)                                                           devise/unlocks#show
                           POST   /users/unlock(.:format)                                                           devise/unlocks#create
                      user GET    /users/:id(.:format)                                                              users#show
+                          PATCH  /users/:id(.:format)                                                              users#update
+                          PUT    /users/:id(.:format)                                                              users#update
+                  welcome GET    /welcome(.:format)                                                                users#welcome
        authenticated_root GET    /                                                                                 dashboard#index
                      root GET    /                                                                                 static_pages#index
        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                        active_storage/blobs#show
