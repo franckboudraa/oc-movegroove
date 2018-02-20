@@ -1,0 +1,13 @@
+<div class="text-center">
+  <h2>Welcome on <span class="navbar-brand">move&groove</span>!</h2>
+  <h3>You're on the right track!</h3>
+  <h4>Please enter your name:</h4>
+  <%= form_for(@user) do |f| %>
+    <div class="form-group mb-5">
+        <%= f.text_field :name, autofocus: true, class: 'form-control big-input', required: true, id: 'exampleInput1' %>
+    </div>
+    <div class="form-group col-4 ml-auto mr-auto">
+      <%= f.submit "Submit", class: "btn btn-primary btn-block btn-lg" %>
+    </div>
+    <% end %>
+</div>

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :update]
+
+  get '/welcome', to: 'users#welcome', as: :welcome
 
   authenticated :user do
     root 'dashboard#index', as: :authenticated_root
