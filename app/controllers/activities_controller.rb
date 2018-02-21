@@ -2,8 +2,17 @@ class ActivitiesController < ApplicationController
   # Activities:
   # - running
   # - walking
+  # - cycling
   # - swimming
-  # -
+  # - elliptical
+  # - handball
+  # - rowing
+  # - football
+  # - soccer
+  # - golf
+  # - bowling
+  # - yoga
+
   before_action :authenticate_user!
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
