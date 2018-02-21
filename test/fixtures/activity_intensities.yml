@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  met: 9.99
+  activity_id: 
+
+two:
+  title: MyString
+  met: 9.99
+  activity_id: 
