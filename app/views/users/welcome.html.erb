@@ -4,10 +4,21 @@
   <h4>Please enter your name:</h4>
   <%= form_for(@user) do |f| %>
     <div class="form-group mb-5">
-        <%= f.text_field :name, autofocus: true, class: 'form-control big-input', required: true, id: 'exampleInput1' %>
+      <%= f.text_field :name, autofocus: true, class: 'form-control big-input col-6 mr-auto ml-auto', required: true %>
     </div>
+
+    <h4>Please enter your height:</h4>
+    <div class="form-group mb-5">
+      <%= f.number_field :height, class: 'form-control big-input col-3 mr-auto ml-auto', placeholder:'Your height in centimeters', required: true, within: 90..240 %>
+    </div>
+
+    <h4>Please enter your weight:</h4>
+    <div class="form-group mb-5">
+      <%= f.number_field :weight, class: 'form-control big-input col-3 mr-auto ml-auto', placeholder:'Your weight in kilograms', required: true, within: 30..200 %>
+    </div>
+
     <div class="form-group col-4 ml-auto mr-auto">
       <%= f.submit "Submit", class: "btn btn-primary btn-block btn-lg" %>
     </div>
-    <% end %>
+  <% end %>
 </div>
