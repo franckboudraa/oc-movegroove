@@ -10,17 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
+      </div>
+      <%= f.number_field :duration, within: 1..600, required: true, class: 'form-control', placeholder: 'Duration in minutes' %>
+    </div>
+  </div>
+
 
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
       </div>
-      <%= f.collection_select(:activity_intensity_id, @activity.activity_intensities, :id, :title) %>
+      <%= f.collection_select(:activity_intensity_id, @activity.activity_intensities, :id, :title, {prompt: 'Session\'s difficulty'}, {class:'form-control', required: true}) %>
     </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions text-center">
+    <%= f.submit "Submit entry", class:'btn btn-primary' %>
   </div>
 <% end %>
