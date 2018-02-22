@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_21_100614) do
+ActiveRecord::Schema.define(version: 2018_02_22_163316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 2018_02_21_100614) do
     t.datetime "updated_at", null: false
     t.bigint "activity_id"
     t.index ["activity_id"], name: "index_activity_intensities_on_activity_id"
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer "duration"
+    t.bigint "activity_id"
+    t.bigint "activity_intensity_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_logs_on_activity_id"
+    t.index ["activity_intensity_id"], name: "index_logs_on_activity_intensity_id"
+    t.index ["user_id"], name: "index_logs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
