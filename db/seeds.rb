@@ -6,23 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#Activity.destroy_all
-#Activity.connection.execute('ALTER SEQUENCE activities_id_seq RESTART WITH 1')
-#ActivityIntensity.connection.execute('ALTER SEQUENCE activity_intensities_id_seq RESTART WITH 1')
+ActivityIntensity.destroy_all
+Activity.destroy_all
+Activity.connection.execute('ALTER SEQUENCE activities_id_seq RESTART WITH 1')
+ActivityIntensity.connection.execute('ALTER SEQUENCE activity_intensities_id_seq RESTART WITH 1')
+
 
 activities = Activity.create([
-                                 { name: 'Running' },
-                                 { name: 'Walking' },
-                                 { name: 'Cycling' },
-                                 { name: 'Swimming' },
-                                 { name: 'Elliptical' },
-                                 { name: 'Handball' },
-                                 { name: 'Rowing' },
-                                 { name: 'Football' },
-                                 { name: 'Soccer' },
-                                 { name: 'Golf' },
-                                 { name: 'Bowling' },
-                                 { name: 'Yoga' }
+                                 { name: 'Running', icon: 'running' },
+                                 { name: 'Walking', icon: 'walking' },
+                                 { name: 'Cycling', icon: 'cycling' },
+                                 { name: 'Swimming', icon: 'swimming' },
+                                 { name: 'Elliptical', icon: 'stepper' },
+                                 { name: 'Handball', icon: 'handball' },
+                                 { name: 'Rowing', icon: 'rowing-machine' },
+                                 { name: 'Football', icon: 'american-football-player' },
+                                 { name: 'Soccer', icon: 'soccer' },
+                                 { name: 'Golf', icon: 'golf' },
+                                 { name: 'Bowling', icon: 'bowling' },
+                                 { name: 'Yoga', icon: 'yoga' }
                              ])
 ActivityIntensity.create(title: '4mph avg', met: 6.0, activity_id: 1)
 ActivityIntensity.create(title: '6mph avg', met: 9.8, activity_id: 1)

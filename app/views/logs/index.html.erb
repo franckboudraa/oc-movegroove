@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-7 col-sm-12">
+    <h3>Daily logs</h3>
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @logs.each do |log| %>
+        <tr>
+          <td><%= link_to 'Show', log %></td>
+          <td><%= link_to 'Edit', edit_log_path(log) %></td>
+          <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-md-5 col-sm-12 text-right">
+    <h3>Add a log entry</h3>
+    <% i = 0 %>
+    <div class="btn-group-vertical m-0" role="group">
+      <% @activities.each do |activity| %>
+        <% i += 1 %>
+        <%= link_to new_log_entry_path(activity.id), class: 'btn btn-primary mb-1' do %>
+          <i class="icons8-<%= activity.icon %> display-2"></i><br />
+          <%= activity.name %>
+        <% end %>
+        <% if i == 4 || i == 8 %>
+          </div>
+          <div class="btn-group-vertical" role="group">
+        <% end %>
+      <% end %>
+      </div>
+  </div>
+</div>

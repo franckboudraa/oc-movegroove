@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :activities
+  get 'logs/:id/new', to: 'logs#new', as: :new_log_entry
+  resources :activities, :logs
 
   devise_for :users, controllers: {
       sessions: 'users/sessions'
