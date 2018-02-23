@@ -1,9 +1,6 @@
 <h1 class="text-center mb-4">New <%= @activity.name.downcase %> session</h1>
-
-<div class="row">
-  <div class="col-4 mx-auto">
-    <%= render 'form', log: @log %>
-  </div>
+<div class="text-center">
+  <%= render 'form', log: @log%>
 </div>
 
 <%= link_to 'Back', logs_path %>

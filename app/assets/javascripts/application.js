@@ -16,4 +16,7 @@
 //= require popper
 // require bootstrap
 //= require bootstrap-material-design.min
-// require material-kit.min
+// require moment.min
+// require bootstrap-datetimepicker.min
+// require nouislider.min
+//= require material-kit.min

@@ -25,9 +25,14 @@
         </li>
         <li class="nav-item">
           <%= link_to activities_path, class: 'nav-link' do %>
-            <i class="material-icons">email</i>
+            <i class="material-icons">forum</i>
           <% end %>
         </li>
+          <li class="nav-item">
+            <%= link_to activities_path, class: 'nav-link' do %>
+              <i class="material-icons">notifications_none</i>
+            <% end %>
+          </li>
           <li class="dropdown nav-item">
             <a href="#pablo" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
               <div class="profile-photo-small">
@@ -40,11 +45,6 @@
               <%= link_to "Preferences", edit_user_registration_path, class:'dropdown-item' %>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'dropdown-item' %>
             </div>
-          </li>
-          <li class="nav-item">
-            <%= link_to new_activity_path, class:"btn btn-primary btn-raised btn-fab btn-round" do %>
-              <i class="material-icons">add</i>
-            <% end %>
           </li>
         <% end %>
       </ul>
