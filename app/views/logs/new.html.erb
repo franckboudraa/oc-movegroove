@@ -1,4 +1,6 @@
-<h1 class="text-center mb-4">New <%= @activity.name.downcase %> session</h1>
+<h1 class="text-center">
+  <i class="icons8-<%= @activity.icon %> display-1"></i> <%= @activity.name %>
+</h1>
 <div class="text-center">
   <%= render 'form', log: @log%>
 </div>

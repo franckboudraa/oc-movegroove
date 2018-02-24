@@ -3,8 +3,9 @@ class LogsController < ApplicationController
   before_action :set_log_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @logs = Log.all
+    @logs = Log.all.includes(:activity, :activity_intensity)
     @activities = Activity.all.order(:id)
+    @user = current_user
   end
 
   def show
@@ -17,6 +18,8 @@ class LogsController < ApplicationController
 
   def create
     @log = Log.new(log_params)
+    @log.user = current_user
+    @activity = Activity.find(log_params[:activity_id])
 
     respond_to do |format|
       if @log.save
@@ -57,7 +60,7 @@ class LogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def log_params
-    params.fetch(:log, {})
+    params.require(:log).permit(:duration, :activity_id, :activity_intensity_id, :user_id, :comment)
   end
 
 end

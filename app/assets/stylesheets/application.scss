@@ -100,3 +100,15 @@ body {
 .btn-group-vertical{
   margin: unset !important;
 }
+
+#i1:hover, #i2:hover, #inlineRadio1:checked+i, #inlineRadio2:checked+i{
+  color: #f44336 !important;
+}
+
+#i3:hover, #inlineRadio3:checked+i{
+  color: #ffeb3b !important;
+}
+
+#i4:hover, #i5:hover, #inlineRadio4:checked+i, #inlineRadio5:checked+i{
+  color: #4caf50 !important;
+}

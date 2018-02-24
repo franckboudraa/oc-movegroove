@@ -10,30 +10,30 @@
       </ul>
     </div>
   <% end %>
-  <h3>Feeling about your session</h3>
+  <h3>How do you feel about your session?</h3>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> <i class="material-icons display-2">sentiment_very_dissatisfied</i>
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="i1"> <i id="i1" class="material-icons radio display-2">sentiment_very_dissatisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> <i class="material-icons display-2">sentiment_dissatisfied</i>
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="i2"> <i id="i2" class="material-icons radio display-2">sentiment_dissatisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> <i class="material-icons display-2">sentiment_neutral</i>
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="i3"> <i id="i3" class="material-icons radio display-2">sentiment_neutral</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> <i class="material-icons display-2">sentiment_satisfied</i>
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="i4"> <i id="i4" class="material-icons radio display-2">sentiment_satisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> <i class="material-icons display-2">sentiment_very_satisfied</i>
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="i5"> <i id="i5" class="material-icons radio display-2">sentiment_very_satisfied</i>
     </label>
   </div>
 
@@ -67,6 +67,7 @@
       </div>
     </div>
   </div>
+  <%= f.hidden_field :activity_id, value:@activity.id %>
 
   <div class="actions text-center">
     <%= f.submit "Submit entry", class:'btn btn-primary' %>

@@ -1,26 +1,55 @@
 <div class="row">
-  <div class="col-md-7 col-sm-12">
+  <div class="col-md-8 col-sm-12 px-0">
     <h3>Daily logs</h3>
-    <table>
+    <table class="table table-striped table-hover table-sm">
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Intensity</th>
+        <th>Calories</th>
+        <th colspan="3">Actions</th>
       </tr>
       </thead>
 
       <tbody>
       <% @logs.each do |log| %>
+      <% met = (log.activity_intensity.met.to_f * @user.weight.to_f * (log.duration.to_f / 60)).to_i %>
         <tr>
-          <td><%= link_to 'Show', log %></td>
-          <td><%= link_to 'Edit', edit_log_path(log) %></td>
-          <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= log.created_at.to_date %></td>
+          <td><%= log.activity.name %></td>
+          <td><%= log.duration %>mn</td>
+          <td><%= log.activity_intensity.title %></td>
+          <td><%= met %></td>
+          <td class="td-actions px-0">
+            <%= link_to log do %>
+              <button type="button" rel="tooltip" class="btn btn-info btn-sm p-1 m-0">
+                <i class="material-icons">search</i>
+              </button>
+            <% end %>
+          </td>
+          <td class="td-actions px-0">
+            <%= link_to edit_log_path(log) do %>
+              <button type="button" rel="tooltip" class="btn btn-success btn-sm btn-sm p-1 m-0">
+                <i class="material-icons">edit</i>
+              </button>
+            <% end %>
+          </td>
+          <td class="td-actions px-0">
+            <%= link_to log, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <button type="button" rel="tooltip" class="btn btn-danger btn-sm btn-sm p-1 m-0">
+                <i class="material-icons">close</i>
+              </button>
+            <% end %>
+          </td>
         </tr>
       <% end %>
       </tbody>
     </table>
 
   </div>
-  <div class="col-md-5 col-sm-12 text-right">
+  <div class="col-md-4 col-sm-12 text-right p-0">
     <h3>Add a log entry</h3>
     <% i = 0 %>
     <div class="btn-group-vertical m-0" role="group">
