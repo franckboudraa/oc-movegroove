@@ -112,3 +112,19 @@ body {
 #i4:hover, #i5:hover, #inlineRadio4:checked+i, #inlineRadio5:checked+i, #i4.forced, #i5.forced {
   color: #4caf50 !important;
 }
+.media .avatar {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+.media .avatar img {
+  width: 100%;
+}
+
+.ml-07{
+  margin-left:.7rem !important;
+}

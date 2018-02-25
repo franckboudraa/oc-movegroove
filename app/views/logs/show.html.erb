@@ -1,22 +1,40 @@
 <div class="row">
-  <div class="col-md-12 ml-auto mr-auto px-5">
+  <div class="col-md-8 ml-auto mr-auto">
     <div class="card card-transparent">
       <div class="card-header card-header-rose text-center">
-        <h1 class="mt-0 mb-1 text-right">
+        <h2>
           <i class="icons8-<%= @log.activity.icon %> display-1 float-left"></i>
-          <span class="pt-5"><%= @log.user.name %>'s <%= @log.activity.name.downcase %> session</span>
-        </h1>
+          <%= @log.activity.name %> session
+        </h2>
+        <h3><%= @log.duration %>mn</h3>
       </div>
       <div class="card-body px-5 py-4">
-  <div class="col-6 text-right pr-5">
-    <i id="<%= @log.feeling %>" class="material-icons forced display-1"><%= feeling_icon(@log.feeling) %></i>
-  </div>
-  <div class="col-6">
-    <h4><%= @log.created_at.strftime("%B %e, %Y") %></h4>
-    <h4>Duration: <%= @log.duration %>mn</h4>
-  </div>
-  <div class="col-6 m-auto text-center">
-    <blockquote class="blockquote"><%= simple_format(@log.comment) %></blockquote>
+        <div class="media-area">
+          <div class="media">
+            <a class="float-left" href="#pablo">
+              <div class="avatar">
+                <img class="media-object" src="/img/avatars/avatar.jpg" alt="...">
+              </div>
+              <i id="<%= @log.feeling %>" class="material-icons forced display-3 ml-07"><%= feeling_icon(@log.feeling) %></i>
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading" style="font-family:inherit !important;">
+                <%= @log.user.name %>
+                <small>· <%= @log.created_at.strftime("%B %e, %Y") %></small>
+              </h4>
+              <p><%= simple_format(@log.comment) %></p>
+              <div class="media-footer">
+                <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+                  <i class="material-icons">reply</i> Reply
+                </a>
+                <a href="#pablo" class="btn btn-danger btn-link float-right">
+                  <i class="material-icons">favorite</i> 243
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-    </div></div></div>
