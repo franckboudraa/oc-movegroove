@@ -14,7 +14,8 @@
               <div class="description">
                 <h4 class="fw-900 info-title-sans-serif">Track your progress</h4>
                 <p class="description">
-                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                  Discover how many calories you spent for each session.<br />
+                  12 sports available for free right now!
                 </p>
               </div>
             </div>
@@ -25,7 +26,8 @@
               <div class="description">
                 <h4 class="fw-900 info-title-sans-serif">Workout with friends</h4>
                 <p class="description">
-                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                 Easily add your friends and practice together!<br />
+                 You can also comments and see your friends progression.
                 </p>
               </div>
             </div>
@@ -36,15 +38,15 @@
               <div class="description">
                 <h4 class="fw-900 info-title-sans-serif">Sync all your devices</h4>
                 <p class="description">
-                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                  Your workouts are automatically synchronized on all your devices.
                 </p>
               </div>
             </div>
           </div>
           <div class="col-md-7 col-sm-12 pr-5 text-center">
-            <button class="btn btn-social btn-fill facebook" style="font-size:0.9rem">
+            <%= link_to user_facebook_omniauth_authorize_path, {:class => 'btn btn-social btn-fill facebook', :style => 'font-size:0.9rem'} do %>
               <%= icon('fab', 'facebook-f', class: 'mr-2') %> Login with Facebook
-            </button>
+            <% end %>
             <button class="btn btn-social btn-fill gplus" style="font-size:0.9rem">
               <%= icon('fab', 'google', class: 'mr-2') %> Login with Google
             </button>

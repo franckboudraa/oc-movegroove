@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :activities, :logs
 
   devise_for :users, controllers: {
+      omniauth_callbacks: 'users/omniauth_callbacks',
       sessions: 'users/sessions'
   }
 
