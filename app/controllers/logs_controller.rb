@@ -3,7 +3,7 @@ class LogsController < ApplicationController
   before_action :set_log_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @logs = Log.all.includes(:activity, :activity_intensity).order(id: :desc)
+    @logs = Log.all.includes(:activity, :activity_intensity).order(id: :desc).where(user_id: current_user.id)
     @activities = Activity.all.order(:id)
     @user = current_user
   end
