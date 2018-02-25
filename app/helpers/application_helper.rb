@@ -14,4 +14,19 @@ module ApplicationHelper
         return 'danger'
     end
   end
+
+  def feeling_icon(feeling)
+    case feeling
+      when 'i1'
+        return 'sentiment_very_dissatisfied'
+      when 'i2'
+        return 'sentiment_dissatisfied'
+      when 'i3'
+        return 'sentiment_neutral'
+      when 'i4'
+        return 'sentiment_satisfied'
+      when 'i5'
+        return 'sentiment_very_satisfied'
+    end
+  end
 end

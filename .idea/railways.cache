@@ -1,4 +1,5 @@
                    Prefix Verb   URI Pattern                                                                       Controller#Action
+            new_log_entry GET    /logs/:id/new(.:format)                                                           logs#new
                activities GET    /activities(.:format)                                                             activities#index
                           POST   /activities(.:format)                                                             activities#create
              new_activity GET    /activities/new(.:format)                                                         activities#new

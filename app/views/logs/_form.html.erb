@@ -13,32 +13,32 @@
   <h3>How do you feel about your session?</h3>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="i1"> <i id="i1" class="material-icons radio display-2">sentiment_very_dissatisfied</i>
+      <%= f.radio_button :feeling, 'i1', {class: 'form-check-input', id: 'inlineRadio1'} %> <i id="i1" class="material-icons radio display-2">sentiment_very_dissatisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="i2"> <i id="i2" class="material-icons radio display-2">sentiment_dissatisfied</i>
+      <%= f.radio_button :feeling, 'i2', {class: 'form-check-input', id: 'inlineRadio2'} %> <i id="i2" class="material-icons radio display-2">sentiment_dissatisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="i3"> <i id="i3" class="material-icons radio display-2">sentiment_neutral</i>
+      <%= f.radio_button :feeling, 'i3', {class: 'form-check-input', id: 'inlineRadio3'} %> <i id="i3" class="material-icons radio display-2">sentiment_neutral</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="i4"> <i id="i4" class="material-icons radio display-2">sentiment_satisfied</i>
+      <%= f.radio_button :feeling, 'i4', {class: 'form-check-input', id: 'inlineRadio4'} %> <i id="i4" class="material-icons radio display-2">sentiment_satisfied</i>
     </label>
   </div>
   <div class="form-check form-check-radio form-check-inline">
     <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="i5"> <i id="i5" class="material-icons radio display-2">sentiment_very_satisfied</i>
+      <%= f.radio_button :feeling, 'i5', {class: 'form-check-input', id: 'inlineRadio5'} %> <i id="i5" class="material-icons radio display-2">sentiment_very_satisfied</i>
     </label>
   </div>
 
   <div class="row">
-    <div class="col-4 mx-auto text-center">
+    <div class="col-8 mx-auto text-center">
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-prepend">
@@ -62,7 +62,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="material-icons">comment</i></span>
           </div>
-          <%= f.text_area :comment, required: true, class: 'form-control',rows:10, placeholder: 'Add a comment about your session' %>
+          <%= f.text_area :comment, required: true, class: 'form-control',rows:3, placeholder: 'Add a comment about your session' %>
         </div>
       </div>
     </div>

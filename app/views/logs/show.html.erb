@@ -1,3 +1,22 @@
-
-<%= link_to 'Edit', edit_log_path(@log) %> |
-<%= link_to 'Back', logs_path %>
+<div class="row">
+  <div class="col-md-12 ml-auto mr-auto px-5">
+    <div class="card card-transparent">
+      <div class="card-header card-header-rose text-center">
+        <h1 class="mt-0 mb-1 text-right">
+          <i class="icons8-<%= @log.activity.icon %> display-1 float-left"></i>
+          <span class="pt-5"><%= @log.user.name %>'s <%= @log.activity.name.downcase %> session</span>
+        </h1>
+      </div>
+      <div class="card-body px-5 py-4">
+  <div class="col-6 text-right pr-5">
+    <i id="<%= @log.feeling %>" class="material-icons forced display-1"><%= feeling_icon(@log.feeling) %></i>
+  </div>
+  <div class="col-6">
+    <h4><%= @log.created_at.strftime("%B %e, %Y") %></h4>
+    <h4>Duration: <%= @log.duration %>mn</h4>
+  </div>
+  <div class="col-6 m-auto text-center">
+    <blockquote class="blockquote"><%= simple_format(@log.comment) %></blockquote>
+  </div>
+</div>
+    </div></div></div>
