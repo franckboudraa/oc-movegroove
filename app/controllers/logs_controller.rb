@@ -1,5 +1,6 @@
 class LogsController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_if_user_miss_props
   before_action :set_log_entry, only: [:show, :edit, :update, :destroy]
 
   def index
