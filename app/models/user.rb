@@ -7,9 +7,9 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: %i[facebook]
   has_many :logs
 
-  validates :name, length: { in: 3..30 }
-  validates :weight, :inclusion => { :in => 30..200, :message => "The weight must be between 30 and 200kg" }
-  validates :height, :inclusion => { :in => 90..240, :message => "The height must be between 90 and 240cm" }
+  #validates :name, length: { in: 3..30 }
+  #validates :weight, :inclusion => { :in => 30..200, :message => "The weight must be between 30 and 200kg" }
+  #validates :height, :inclusion => { :in => 90..240, :message => "The height must be between 90 and 240cm" }
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
