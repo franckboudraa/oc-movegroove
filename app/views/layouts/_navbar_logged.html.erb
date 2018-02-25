@@ -19,27 +19,24 @@
           </li>
         <% else %>
         <li class="nav-item">
-          <%= link_to "Dashboard", authenticated_root_path, class:'nav-link' %>
+          <%= link_to "Dashboard", logs_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to "My activities", logs_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to activities_path, class: 'nav-link' do %>
+          <%= link_to '', class: 'nav-link' do %>
             <i class="material-icons">forum</i>
           <% end %>
         </li>
           <li class="nav-item">
-            <%= link_to activities_path, class: 'nav-link' do %>
+            <%= link_to '', class: 'nav-link' do %>
               <i class="material-icons">notifications_none</i>
             <% end %>
           </li>
           <li class="dropdown nav-item">
-            <a href="#pablo" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+            <%= link_to user_path(current_user), {:class => 'profile-photo dropdown-toggle nav-link', "data-toggle" => 'dropdown'} do %>
               <div class="profile-photo-small">
                 <img src="/img/avatars/<%= avatar %>.jpg" alt="Circle Image" class="rounded-circle img-fluid">
               </div>
-            </a>
+            <% end %>
             <div class="dropdown-menu dropdown-menu-right">
               <h6 class="dropdown-header"><%= current_user.name %></h6>
               <%= link_to "My profile", user_path(current_user), class:'dropdown-item' %>

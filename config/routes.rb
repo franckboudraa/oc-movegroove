@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/welcome', to: 'users#welcome', as: :welcome
 
   authenticated :user do
-    root 'dashboard#index', as: :authenticated_root
+    root 'logs#index', as: :authenticated_root
   end
 
   root to: "static_pages#index"
