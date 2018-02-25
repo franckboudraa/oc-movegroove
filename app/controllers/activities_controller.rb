@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_if_user_has_name
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities
@@ -71,5 +72,11 @@ class ActivitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
       params.fetch(:activity, {})
+    end
+
+    def check_if_user_has_name
+      if current_user.name.nil?
+        redirect_to welcome_path
+      end
     end
 end

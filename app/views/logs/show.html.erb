@@ -1,25 +1,24 @@
 <div class="row">
   <div class="col-md-8 ml-auto mr-auto">
     <div class="card card-transparent">
-      <div class="card-header card-header-rose text-center">
+      <div class="card-header card-header-rose text-center p-0">
         <h2>
           <i class="icons8-<%= @log.activity.icon %> display-1 float-left"></i>
           <%= @log.activity.name %> session
         </h2>
-        <h3><%= @log.duration %>mn</h3>
+        <h3><%= @log.activity_intensity.title %> · <%= @log.duration %>mn</h3>
       </div>
-      <div class="card-body px-5 py-4">
+      <div class="card-body pl-5 pr-4 pt-4 pb-0">
         <div class="media-area">
           <div class="media">
             <a class="float-left" href="#pablo">
               <div class="avatar">
-                <img class="media-object" src="/img/avatars/avatar.jpg" alt="...">
+                <img class="media-object" src="/img/avatars/<%= @log.user.avatar %>.jpg" alt="...">
               </div>
-              <i id="<%= @log.feeling %>" class="material-icons forced display-3 ml-07"><%= feeling_icon(@log.feeling) %></i>
             </a>
             <div class="media-body">
               <h4 class="media-heading" style="font-family:inherit !important;">
-                <%= @log.user.name %>
+                <%= @log.user.name %> <i class="material-icons"><%= feeling_icon(@log.feeling) %></i>
                 <small>· <%= @log.created_at.strftime("%B %e, %Y") %></small>
               </h4>
               <p><%= simple_format(@log.comment) %></p>

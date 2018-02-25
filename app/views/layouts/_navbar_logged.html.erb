@@ -1,3 +1,4 @@
+<% if (current_user.avatar.nil?) then avatar = 'camp' else avatar = current_user.avatar end %>
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,7 +37,7 @@
           <li class="dropdown nav-item">
             <a href="#pablo" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
               <div class="profile-photo-small">
-                <img src="/img/avatars/camp.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+                <img src="/img/avatars/<%= avatar %>.jpg" alt="Circle Image" class="rounded-circle img-fluid">
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
