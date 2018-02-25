@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfaefb22-b405-4135-b975-aa08aab6d6ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0da21c16-e37a-4da3-b4b3-d0ba31c7e301.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0da21c16-e37a-4da3-b4b3-d0ba31c7e301.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0da21c16-e37a-4da3-b4b3-d0ba31c7e301/storage_v2/_src_/database/dfvh7kh5moj8qg.G-B1pw/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/0da21c16-e37a-4da3-b4b3-d0ba31c7e301/storage_v2/_src_/database/dfvh7kh5moj8qg.G-B1pw/schema/public.abK9xQ.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -94,12 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users" pinned="false" current-in-tab="true">
+        <entry file="das://table:/6da97a08/0da21c16-e37a-4da3-b4b3-d0ba31c7e301/dfvh7kh5moj8qg.public.users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -444,12 +450,12 @@
       <workItem from="1519568378163" duration="108000" />
       <workItem from="1519568499295" duration="6982000" />
       <workItem from="1519592053544" duration="30000" />
-      <workItem from="1519592186073" duration="552000" />
+      <workItem from="1519592186073" duration="698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87842000" />
+    <option name="totallyTimeSpent" value="87988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="992" extended-state="0" />
@@ -824,18 +830,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://table:/6da97a08/0da21c16-e37a-4da3-b4b3-d0ba31c7e301/dfvh7kh5moj8qg.public.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
