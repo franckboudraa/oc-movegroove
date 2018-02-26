@@ -4,10 +4,14 @@
       <div class="card-header card-header-rose text-center">
         <h2 class="mt-0 mb-1">Login</h2>
       </div>
-      <div class="card-body px-5 py-4">
+      <div class="card-body px-5 py-4 text-center">
+        <%= link_to user_facebook_omniauth_authorize_path, {:class => 'btn btn-social btn-fill facebook', :style => 'font-size:0.9rem'} do %>
+          <%= icon('fab', 'facebook-f', class: 'mr-2') %> Login with Facebook
+        <% end %>
+        <h3>or</h3>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group">
+          <div class="form-group pt-0">
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"><%= icon('fas', 'envelope') %></span>
@@ -16,7 +20,7 @@
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group pt-0">
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"><%= icon('fas', 'key') %></span>
