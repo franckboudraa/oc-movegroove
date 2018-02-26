@@ -1,4 +1,10 @@
 <div class="text-center">
   <%= image_tag @user.avatar+'?type=large', {:class => 'rounded-circle img-fluid'} %><br />
-  <h1><%= @user.name %></h1>
+  <h1 class="mb-5"><%= @user.name %>'s activities</h1>
 </div>
+  <%
+    @user.logs.each do |log|
+      @log = log
+  %>
+      <%= render 'logs/show' %>
+  <% end %>
