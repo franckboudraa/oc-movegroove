@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<% if !current_user %>
+<% if !current_user && controller_name != 'users' && action_name != 'show' %>
   <% body_class = 'homepage-bg' # Set image background on public pages %>
 <% else %>
   <% body_class = 'dash-bg' # No image background on private pages %>

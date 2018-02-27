@@ -11,9 +11,9 @@
     <div class="col-md-4">
       <div class="card card-profile">
         <div class="card-header card-avatar">
-          <a href="#pablo">
-            <img class="img" src="/img/avatars/christian.jpg">
-          </a>
+          <%= link_to user_path(id:6) do %>
+            <%= image_tag "/img/avatars/christian.jpg", class: 'img' %>
+          <% end %>
         </div>
         <div class="card-body">
           <h4 class="card-title">John Doe</h4>
@@ -25,16 +25,16 @@
           </p>
         </div>
         <div class="card-footer justify-content-center">
-          <a href="#" class="btn btn-secondary">View profile</a>
+          <%= link_to 'View profile', user_path(id:6), class: 'btn btn-secondary' %>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card card-profile">
         <div class="card-header card-avatar">
-          <a href="#pablo">
-            <img class="img" src="/img/avatars/card-profile6-square.jpg">
-          </a>
+          <%= link_to user_path(id:7) do %>
+            <%= image_tag "/img/avatars/card-profile6-square.jpg", class: 'img' %>
+          <% end %>
         </div>
         <div class="card-body">
           <h4 class="card-title">Jane Doe</h4>
@@ -46,16 +46,16 @@
           </p>
         </div>
         <div class="card-footer justify-content-center">
-          <a href="#" class="btn btn-secondary">View profile</a>
+          <%= link_to 'View profile', user_path(id:6), class: 'btn btn-secondary' %>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card card-profile">
         <div class="card-header card-avatar">
-          <a href="#pablo">
-            <img class="img" src="/img/avatars/avatar.jpg">
-          </a>
+          <%= link_to user_path(id:8) do %>
+            <%= image_tag "/img/avatars/avatar.jpg", class: 'img' %>
+          <% end %>
         </div>
         <div class="card-body ">
           <h4 class="card-title">Pamela Doe</h4>
@@ -67,7 +67,7 @@
           </p>
         </div>
         <div class="card-footer justify-content-center">
-          <a href="#" class="btn btn-secondary">View profile</a>
+          <%= link_to 'View profile', user_path(id:8), class: 'btn btn-secondary' %>
         </div>
       </div>
     </div>

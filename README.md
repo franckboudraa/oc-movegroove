@@ -11,6 +11,8 @@ Made with Ruby on Rails, PostgreSQL.
 
 Auth with Devise and Facebook OAuth.
 
+Use Sendgrid API for mails.
+
 Tests included.
   
 Preview:
