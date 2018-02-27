@@ -7,6 +7,9 @@ https://openclassrooms.com/projects/track-your-fitness-habits
 - Use Ruby with a database
 - Create a Rails app
 
+Preview:
+https://movegroove.herokuapp.com
+
 Made with Ruby on Rails, PostgreSQL.
 
 Auth with Devise and Facebook OAuth.
@@ -14,9 +17,11 @@ Auth with Devise and Facebook OAuth.
 Use Sendgrid API for mails.
 
 Tests included. `rails t`
-  
-Preview:
-https://movegroove.herokuapp.com
+
+Hot reloading with Guard + LiveReload Chrome/Firefox extension:
+    
+    guard
+    rails s
 
 Set env variables with Figaro:
 
