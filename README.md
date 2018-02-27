@@ -1,24 +1,17 @@
-# README
+# Move&Groove
+#### Project for the OpenClassrooms Fullstack Developer Path
+https://openclassrooms.com/projects/track-your-fitness-habits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Handle user logins securely with the Devise Rubygem
+- Perform basic programming tasks with Ruby
+- Use Ruby with a database
+- Create a Rails app
 
-Things you may want to cover:
+Made with Ruby on Rails, PostgreSQL.
 
-* Ruby version
+Auth with Devise and Facebook OAuth.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tests included.
+  
+Preview:
+https://movegroove.herokuapp.com
