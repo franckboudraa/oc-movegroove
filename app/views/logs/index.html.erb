@@ -29,7 +29,7 @@
 
         <tbody>
         <% @logs.each do |log| %>
-          <% met = (log.activity_intensity.met.to_f * @user.weight.to_f * (log.duration.to_f / 60)).to_i %>
+          <% met = calculate_calories_from_met(log.activity_intensity.met, @user.weight, log.duration) %>
           <tr>
             <td><%= log.created_at.strftime("%d/%m") %></td>
             <td><i id="<%= log.feeling %>" class="material-icons forced"><%= feeling_icon(log.feeling) %></i></td>

@@ -29,4 +29,8 @@ module ApplicationHelper
         return 'sentiment_very_satisfied'
     end
   end
+
+  def calculate_calories_from_met(met, weight, duration)
+    return (met.to_f * weight.to_f * (duration.to_f / 60)).to_i
+  end
 end
