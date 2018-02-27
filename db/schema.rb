@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_25_184447) do
+ActiveRecord::Schema.define(version: 2018_02_27_135444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2018_02_25_184447) do
     t.string "name"
     t.decimal "weight"
     t.integer "height"
-    t.string "avatar"
+    t.string "avatar", default: "/img/avatars/sample.jpg"
     t.string "provider"
     t.string "uid"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
