@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  duration: 
-  activity: 
-  activityintensity: 
-  user: 
+  duration: 30
+  activity_id: 1
+  activity_intensity_id: 1
+  user_id: 1
+  comment: "cool"
+  feeling: "i5"
 
 two:
-  duration: 
-  activity: 
-  activityintensity: 
-  user: 
+  duration: 30
+  activity_id: 1
+  activity_intensity_id: 2
+  user_id: 2
+  comment: "bad"
+  feeling: "i1"

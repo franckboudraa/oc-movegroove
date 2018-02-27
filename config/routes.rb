@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'logs/:id/new', to: 'logs#new', as: :new_log_entry
-  resources :activities, :logs
+  resources :logs
 
   devise_for :users, controllers: {
       omniauth_callbacks: 'users/omniauth_callbacks',

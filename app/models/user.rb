@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable
   devise :omniauthable, omniauth_providers: %i[facebook]
-  has_many :logs
+  has_many :logs, dependent: :destroy
 
   #validates :name, length: { in: 3..30 }
   #validates :weight, :inclusion => { :in => 30..200, :message => "The weight must be between 30 and 200kg" }

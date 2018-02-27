@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  met: 9.99
-  activity_id: 
+  id: 1
+  title: Slow
+  met: 2.50
+  activity_id: 1
 
 two:
-  title: MyString
-  met: 9.99
-  activity_id: 
+  id: 2
+  title: Fast
+  met: 5.0
+  activity_id: 1

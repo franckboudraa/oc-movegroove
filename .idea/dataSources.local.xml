@@ -19,9 +19,5 @@
       <user-name>chwcqngzdlrndc</user-name>
       <introspection-schemas>dfvh7kh5moj8qg:public</introspection-schemas>
     </data-source>
-    <data-source name="Rails MoveGroove: test" uuid="a703da0d-745f-40da-8b44-0f6963c5b93f">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <first-sync>true</first-sync>
-    </data-source>
   </component>
 </project>
