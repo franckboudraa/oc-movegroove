@@ -6,7 +6,8 @@
           <i class="icons8-<%= @log.activity.icon %> display-1 float-left"></i>
           <%= @log.activity.name %> session
         </h2>
-        <h3><%= @log.activity_intensity.title %> · <%= @log.duration %>mn · </h3>
+        <% met = calculate_calories_from_met(@log.activity_intensity.met, @log.user.weight, @log.duration) %>
+        <h3><%= @log.activity_intensity.title %> · <%= @log.duration %>mn · <%= met %> kcal</h3>
       </div>
       <div class="card-body pl-5 pr-4 pt-4 pb-0">
         <div class="media-area">
