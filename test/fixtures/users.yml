@@ -7,12 +7,18 @@
 john:
   id: 1
   email: "john@doe.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  confirmed_at: 2018-02-02 08:31:23
+  confirmation_sent_at: 2018-02-02 08:30:59
   name: "John Doe"
   weight: 80
   height: 180
 pamela:
   id: 2
   email: "pamela@doe.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  confirmed_at: 2018-02-02 08:31:23
+  confirmation_sent_at: 2018-02-02 08:30:59
   name: "Pamela Doe"
   weight: 60
   height: 170
