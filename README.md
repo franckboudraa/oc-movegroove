@@ -13,7 +13,19 @@ Auth with Devise and Facebook OAuth.
 
 Use Sendgrid API for mails.
 
-Tests included.
+Tests included. `rails t`
   
 Preview:
 https://movegroove.herokuapp.com
+
+Set env variables with Figaro:
+
+`#/config/application.yml
+DATABASE_URL
+DEFAULT_SENDER_EMAIL
+FACEBOOK_APP_ID
+FACEBOOK_APP_SECRET
+SECRET_KEY_BASE
+SENDGRID_PASSWORD
+SENDGRID_USERNAME
+`
