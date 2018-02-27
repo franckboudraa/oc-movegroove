@@ -20,12 +20,12 @@ https://movegroove.herokuapp.com
 
 Set env variables with Figaro:
 
-`#/config/application.yml
-DATABASE_URL
-DEFAULT_SENDER_EMAIL
-FACEBOOK_APP_ID
-FACEBOOK_APP_SECRET
-SECRET_KEY_BASE
-SENDGRID_PASSWORD
-SENDGRID_USERNAME
-`
+
+    # config/application.yml
+    DATABASE_URL
+    DEFAULT_SENDER_EMAIL
+    FACEBOOK_APP_ID
+    FACEBOOK_APP_SECRET
+    SECRET_KEY_BASE
+    SENDGRID_PASSWORD
+    SENDGRID_USERNAME
